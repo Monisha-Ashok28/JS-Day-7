@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 7</title>
+</head>
+<body>
+    
+    <script>
+
+        //Task 1
+        document.write("Task 1"+"<br>");
+        const str = "javascript";
+        const uppercase= str.toUpperCase();
+        document.write("uppercase of javascript = " +uppercase);
+        document.write("<br>"+"<br>");
+
+        //Task 2
+        document.write("Task 2"+"<br>");
+        const name = "HELLO WORLD";
+        const lowercase = name.toLowerCase();
+        document.write("lowercase of HELLOWORLD = "+lowercase);
+        document.write("<br>"+"<br>");
+
+        //Task 3
+        document.write("Task 3"+"<br>");
+        const word = "JavaScript";
+        const extractword= word.slice(4);
+        document.write("extract of javascript = "+extractword);
+        document.write("<br>"+"<br>");
+
+        //Task 4
+        document.write("Task 4"+"<br>");
+        const name1= "This is a bad day";
+        const word1 = name1.replace("bad","good");
+        document.write(word1);
+        document.write("<br>"+"<br>");
+
+        //Task 5
+        document.write("Task 5"+"<br>");
+        const givenword = "I love Coding!";
+        const presentword ="Coding";
+        const present = givenword.includes(presentword);
+        document.write("Coding is present in I love Coding = " +present);
+        document.write("<br>"+"<br>");
+    
+        //Task 6
+        document.write("Task 6"+"<br>");
+        const str1 = "Hello world";
+        const str2 = "world";
+        const position = str1.indexOf(str2);
+        document.write("Index of world in Hello world is " +position);
+        document.write("<br>"+"<br>");
+
+        //Task 7
+        document.write("Task 7"+"<br>");
+        const stud1 = "Trim me";
+        const stud2 = stud1.replace(/ /g,'');
+        document.write(stud2);
+        document.write("<br>"+"<br>");
+
+        //Task 8
+        document.write("Task 8"+"<br>");
+        const gword = "Programmimg";
+        const characterCount = gword.length;
+        document.write(characterCount);
+        document.write("<br>"+"<br>");
+
+        //Task 9
+        document.write("Task 9"+"<br>");
+        let char = "Apple";
+        let prefix = "A";
+        const startsWithA = char.startsWith(prefix);
+        document.write("Apple starts with A = " +startsWithA);
+        document.write("<br>"+"<br>");
+
+        //Task 10
+        document.write("Task 10"+"<br>");
+        let get = "apple, banana, grapes";
+        let fruits = get.split(" ");
+        document.write(fruits);
+        console.log(fruits);
+        document.write("<br>"+"<br>");
+
+        //Task 11
+        document.write("Task 11"+"<br>");
+        let lword = "JS";
+        const repeating = lword.repeat(3);
+        document.write(repeating);
+        document.write("<br>"+"<br>");
+
+        //Task 12
+        document.write("Task 12"+"<br>");
+        const string1 = "Web";
+        const string2 = "Development";
+        const string = string1.concat(string2);
+        document.write(string);
+        document.write("<br>"+"<br>");
+
+        //Task 13
+        document.write("Task 13"+"<br>");
+        let username = "user123";
+        let minimumLength = 5;
+        if (username.length >= minimumLength){
+            document.write("The String has at least 5 characters");
+        } else{
+            document.write("The String is too short");
+        }
+        document.write("<br>"+"<br>");
+
+        //Task 14
+        document.write("Task 14"+"<br>");
+        let sentence = "Java Script";
+        let start1 = "Java";
+        let start2 = "java";
+        document.write("sentence starts with Java " +sentence.startsWith(start1)+"<br>");
+        document.write("sentence starts with java "+sentence.startsWith(start2));
+        document.write("<br>"+"<br>");
+
+        //Task 15
+        document.write("Task 15"+"<br>");
+        let strings = "Java Script";
+        let substring = "Script";
+        let substring2 = "script";
+        document.write("sentence ends with Script " +sentence.endsWith(substring)+"<br>");
+        document.write("sentence end with script "+sentence.startsWith(substring2));
+        document.write("<br>"+"<br>");
+
+        //Task 16
+        document.write("Task 16"+"<br>");
+        const letter = "The quick brown fox";
+        const check = "brown";
+        const checkword = letter.includes(check);
+        document.write("Check brown word appears in sentence = " +checkword);
+        document.write("<br>"+"<br>");
+
+        //Task 17
+        document.write("Task 17"+"<br>");
+        const fullname = "John David";
+        const initials = fullname.split(' ').map(name => name.charAt(0).toUpperCase()).join('.');
+        document.write(initials);
+        document.write("<br>"+"<br>");
+
+        //Task 18
+        document.write("Task 18"+"<br>");
+        function countLetterSplit(str, letter){
+            return str.split(letter).length -1;
+        }
+        const text = "hello world";
+        const letterToCount = "l";
+        const count = countLetterSplit(text, letterToCount);
+        document.write(count);
+        document.write("<br>"+"<br>");
+
+        //Task 19
+        document.write("Task 19"+"<br>");
+        function findLongestWord(sentence1){
+            const sortedWords = sentence1.split(' ').sort((a,b) => {
+                return b.length -a.length;
+            });
+            return sortedWords[0];
+        }
+        const sentence2 ="JS is a programming language";
+        const longest = findLongestWord(sentence2);
+        document.write("Longest word in a sentence is "+longest);
+        document.write("<br>"+"<br>");
+
+        //Task 20
+         document.write("Task 20"+"<br>");
+         function firstletter(stud){
+            return stud.toLowerCase().split(' ').map(word => {
+                return word.charAt(0).toUpperCase()+ word.slice(1);
+            })
+            .join(' ');
+         }
+
+         
+
+
+    </script>
+</body>
+</html>
